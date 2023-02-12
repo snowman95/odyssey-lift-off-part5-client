@@ -9,7 +9,7 @@ import {
   HttpLink,
 } from "@apollo/client";
 
-const SERVER_URL = "https://graphql-server.up.railway.app/";
+const SERVER_URL = "https://graphql-server.up.railway.app";
 
 const client = new ApolloClient({
   uri: SERVER_URL, // change to YOUR own production server
@@ -18,10 +18,6 @@ const client = new ApolloClient({
   version: "1.0",
   link: new HttpLink({
     uri: SERVER_URL,
-    headers: {
-      Origin: "https://graphql.up.railway.app/",
-    },
-    credentials: "include",
   }),
 });
 
