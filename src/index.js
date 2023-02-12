@@ -18,6 +18,9 @@ const client = new ApolloClient({
   version: "1.0",
   link: new HttpLink({
     uri: SERVER_URL,
+    headers: {
+      Origin: "https://graphql.up.railway.app/",
+    },
     credentials: "include",
   }),
 });
